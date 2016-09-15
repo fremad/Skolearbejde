@@ -3,3 +3,7 @@ C:\Users\Lars\Desktop\Skole\gitmappe\Skolearbejde\I4SWD\Handout\CompressionStock
 C:\Users\Lars\Desktop\Skole\gitmappe\Skolearbejde\I4SWD\Handout\CompressionStocking\obj\Debug\CompressionStocking.csprojResolveAssemblyReference.cache
 C:\Users\Lars\Desktop\Skole\gitmappe\Skolearbejde\I4SWD\Handout\CompressionStocking\obj\Debug\CompressionStocking.dll
 C:\Users\Lars\Desktop\Skole\gitmappe\Skolearbejde\I4SWD\Handout\CompressionStocking\obj\Debug\CompressionStocking.pdb
+C:\Users\Lars Hjerrild\Documents\My Documents\Skolearbejde\I4SWD\Handout\CompressionStocking\bin\Debug\CompressionStocking.dll
+C:\Users\Lars Hjerrild\Documents\My Documents\Skolearbejde\I4SWD\Handout\CompressionStocking\bin\Debug\CompressionStocking.pdb
+C:\Users\Lars Hjerrild\Documents\My Documents\Skolearbejde\I4SWD\Handout\CompressionStocking\obj\Debug\CompressionStocking.dll
+C:\Users\Lars Hjerrild\Documents\My Documents\Skolearbejde\I4SWD\Handout\CompressionStocking\obj\Debug\CompressionStocking.pdb

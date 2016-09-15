@@ -14,39 +14,45 @@ namespace CompressionStocking
     }
 
 
-    public class StockingCtrl : IBtnHandler
+    public class StockingCtrl : IBtnHandler, ICompressionComplete
     {
+        private INotify notifier = null;
         private readonly ICompressionCtrl _compressionCtrl;
         
-        private readonly IVibrator _vibrator = new VibratorA();
-        private ILight _light = null;
-
+        
 
         public StockingCtrl(ICompressionCtrl compressionCtrl)
         {
             _compressionCtrl = compressionCtrl;
         }
 
+        public void HandleCompressionComplete()
+        {
+            notifier = new Notification.CompressionStoppetMessage();
+            notifier.notify(); 
+        }
+
+        public void HandleDeCompressionComplete()
+        {
+        }
 
         // From IBtnHandler
         public void StartBtnPushed()
         {
-            _vibrator.On();
-            _light = new Greenlight();
-            _light.On();
-            _compressionCtrl.Compress();
-            _light.Off();
-            _vibrator.Off();
+            notifier = new Notification.CompressionStoppetMessage();
+            notifier.notify();
+            _compressionCtrl.Compress(this);
         }
 
         public void StopBtnPushed()
         {
-            _vibrator.On();
-            _light = new Redlight();
-            _light.On();
-            _compressionCtrl.Decompress();
-            _light.Off();
-            _vibrator.Off();
+            Console.WriteLine("not implemented!\n");
+            //_vibrator.On();
+            //_light = new Redlight();
+            //_light.On();
+            //_compressionCtrl.Decompress();
+            //_light.Off();
+            //_vibrator.Off();
 
         }
 

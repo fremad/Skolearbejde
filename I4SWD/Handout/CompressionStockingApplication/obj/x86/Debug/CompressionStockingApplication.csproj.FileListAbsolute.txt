@@ -5,3 +5,10 @@ C:\Users\Lars\Desktop\Skole\gitmappe\Skolearbejde\I4SWD\Handout\CompressionStock
 C:\Users\Lars\Desktop\Skole\gitmappe\Skolearbejde\I4SWD\Handout\CompressionStockingApplication\obj\x86\Debug\CompressionStockingApplication.csprojResolveAssemblyReference.cache
 C:\Users\Lars\Desktop\Skole\gitmappe\Skolearbejde\I4SWD\Handout\CompressionStockingApplication\obj\x86\Debug\CompressionStockingApplication.exe
 C:\Users\Lars\Desktop\Skole\gitmappe\Skolearbejde\I4SWD\Handout\CompressionStockingApplication\obj\x86\Debug\CompressionStockingApplication.pdb
+C:\Users\Lars Hjerrild\Documents\My Documents\Skolearbejde\I4SWD\Handout\CompressionStockingApplication\obj\x86\Debug\CompressionStockingApplication.exe
+C:\Users\Lars Hjerrild\Documents\My Documents\Skolearbejde\I4SWD\Handout\CompressionStockingApplication\obj\x86\Debug\CompressionStockingApplication.pdb
+C:\Users\Lars Hjerrild\Documents\My Documents\Skolearbejde\I4SWD\Handout\CompressionStockingApplication\bin\Debug\CompressionStockingApplication.exe
+C:\Users\Lars Hjerrild\Documents\My Documents\Skolearbejde\I4SWD\Handout\CompressionStockingApplication\bin\Debug\CompressionStockingApplication.pdb
+C:\Users\Lars Hjerrild\Documents\My Documents\Skolearbejde\I4SWD\Handout\CompressionStockingApplication\bin\Debug\CompressionStocking.dll
+C:\Users\Lars Hjerrild\Documents\My Documents\Skolearbejde\I4SWD\Handout\CompressionStockingApplication\bin\Debug\CompressionStocking.pdb
+C:\Users\Lars Hjerrild\Documents\My Documents\Skolearbejde\I4SWD\Handout\CompressionStockingApplication\obj\x86\Debug\CompressionStockingApplication.csprojResolveAssemblyReference.cache

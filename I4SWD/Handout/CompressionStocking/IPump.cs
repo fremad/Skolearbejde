@@ -8,7 +8,9 @@ namespace CompressionStocking
     public interface IPump
     {
         void On();
-       
+
+        void Stop();
+
         void Reverse();
     }
 }

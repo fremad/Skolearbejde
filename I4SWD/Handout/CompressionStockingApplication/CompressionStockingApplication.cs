@@ -7,45 +7,27 @@ using CompressionStocking;
 namespace CompressionStockingApplication
 {
 
-    class StubCompressionCtrl : ICompressionCtrl
-    {
-        public void Compress()
-        {
-            Console.WriteLine("StubCompressionCtrl::Compress() called");
-        }
-
-        public void Decompress()
-        {
-            Console.WriteLine("StubCompressionCtrl::Decompress() called");
-        }
-
-        public void Stop()
-        {
-            Console.WriteLine("It stopped \n");
-        }
-    }
-
 
 
     class CompressionStockingApplication
     {
         static void Main(string[] args)
         {
-            var compressionStockingstocking = new StockingCtrl(new CompressionStocking.CompressionCtrl());
-            ConsoleKeyInfo consoleKeyInfo;
+            //var compressionStockingstocking = new StockingCtrl(new CompressionStocking.CompressionCtrl());
+            //ConsoleKeyInfo consoleKeyInfo;
             
-            Console.WriteLine("Compression Stocking Control User Interface");
-            Console.WriteLine("A:   Compress");
-            Console.WriteLine("Z:   Decompress");
-            Console.WriteLine("ESC: Terminate application");
+            //Console.WriteLine("Compression Stocking Control User Interface");
+            //Console.WriteLine("A:   Compress");
+            //Console.WriteLine("Z:   Decompress");
+            //Console.WriteLine("ESC: Terminate application");
 
-            do
-            {
-                consoleKeyInfo = Console.ReadKey(true); // true = do not echo character
-                if (consoleKeyInfo.Key == ConsoleKey.A)  compressionStockingstocking.StartBtnPushed();
-                if (consoleKeyInfo.Key == ConsoleKey.Z)  compressionStockingstocking.StopBtnPushed();
+            //do
+            //{
+            //    consoleKeyInfo = Console.ReadKey(true); // true = do not echo character
+            //    if (consoleKeyInfo.Key == ConsoleKey.A)  compressionStockingstocking.StartBtnPushed();
+            //    if (consoleKeyInfo.Key == ConsoleKey.Z)  compressionStockingstocking.StopBtnPushed();
 
-            } while (consoleKeyInfo.Key != ConsoleKey.Escape);
+            //} while (consoleKeyInfo.Key != ConsoleKey.Escape);
         }
     }
 }

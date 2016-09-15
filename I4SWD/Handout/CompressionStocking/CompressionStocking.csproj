@@ -41,6 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CompessionCtrl.cs" />
+    <Compile Include="ICompressionComplete.cs" />
+    <Compile Include="Notification\CompressionStoppetMessage.cs" />
+    <Compile Include="Notification\CompStartedMsg.cs" />
+    <Compile Include="Notification\INotify.cs" />
     <Compile Include="IPump.cs" />
     <Compile Include="IVibrator.cs" />
     <Compile Include="Laces\ILaceTightener.cs" />
@@ -48,8 +52,6 @@
     <Compile Include="Lights\Greenlight.cs" />
     <Compile Include="Lights\ILight.cs" />
     <Compile Include="Lights\Redlight.cs" />
-    <Compile Include="Pressure\IPressureCtrl.cs" />
-    <Compile Include="Pressure\PressureCtrl.cs" />
     <Compile Include="Pump.cs" />
     <Compile Include="StockingCtrl.cs" />
     <Compile Include="ICompressionCtrl.cs" />

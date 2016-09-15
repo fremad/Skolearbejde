@@ -9,23 +9,30 @@ namespace CompressionStocking
 {
     public class CompressionCtrl : ICompressionCtrl
     {
-        public void Compress()
+        private readonly Timers.ITimerCtrl _timerCtrl = new TimerCtrl();
+        private readonly IPump _pump = new Pump();
+       
+
+    public void Compress(ICompressionComplete there)
         { 
-            _laceTightener.Tighten();
-            //_pump.On();
+           // _laceTightener.Tighten();
+            _pump.On();
+            _timerCtrl.Timeout(5000);
+            _pump.Stop();
+           // there.HandleCompressionComplete();
+            
         }
 
-        
 
         public void Decompress()
         {
-            _laceTightener.Loosen();
-            //_pump.Reverse();
+            //_laceTightener.Loosen();
+            _pump.Reverse();
         }
 
 
-        private readonly Laces.ILaceTightener _laceTightener = new LaceTightener();
-        //private readonly IPump _pump = new Pump();
+        //private readonly Laces.ILaceTightener _laceTightener = new LaceTightener();
+        
 
     }
 }
