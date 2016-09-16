@@ -1,0 +1,39 @@
+﻿<Window x:Class="GUIdatabinding.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GUIdatabinding"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="110*"/>
+            <ColumnDefinition Width="191*"/>
+            <ColumnDefinition Width="216*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="69*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="AgentIdlbl" Content="Id" HorizontalAlignment="Left" Grid.Column="0" Grid.Row="0" VerticalAlignment="center"/>
+        <Label x:Name="Codenamelbl" Content="CodeName" HorizontalAlignment="Left" Grid.Column="0" Grid.Row="1" VerticalAlignment="center"/>
+        <Label x:Name="Specialitylbl" Content="Speciality" HorizontalAlignment="Left" Grid.Column="0" Grid.Row="2" VerticalAlignment="center"/>
+        <Label x:Name="Assignmentlbl" Content="Assaignment" HorizontalAlignment="Left" Grid.Column="0" Grid.Row="3" VerticalAlignment="center"/>
+
+        <TextBox x:Name="AgentIdtxtBox" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap" Width="191" Text="{Binding id}" />
+        <TextBox x:Name="CodeNametxtBox" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap" Width="191" />
+        <TextBox x:Name="Speciality" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap" Width="191" />
+        <TextBox x:Name="AssignmenttxtBox" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap" Width="191" />
+
+        <Label x:Name="AgentIdlblA" Content="Id" HorizontalAlignment="Left" Grid.Column="3" Grid.Row="0" VerticalAlignment="center"/>
+        <Label x:Name="CodenamelblA" Content="CodeName" HorizontalAlignment="Left" Grid.Column="3" Grid.Row="1" VerticalAlignment="center"/>
+        <Label x:Name="SpecialitylblA" Content="Speciality" HorizontalAlignment="Left" Grid.Column="3" Grid.Row="2" VerticalAlignment="center"/>
+        <Label x:Name="AssignmentlblA" Content="Assaignment" HorizontalAlignment="Left" Grid.Column="3" Grid.Row="3" VerticalAlignment="center"/>
+
+
+    </Grid>
+</Window>
