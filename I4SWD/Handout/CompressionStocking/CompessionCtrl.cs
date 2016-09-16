@@ -19,7 +19,7 @@ namespace CompressionStocking
             _pump.On();
             _timerCtrl.Timeout(5000);
             _pump.Stop();
-           // there.HandleCompressionComplete();
+            there.HandleCompressionComplete();
             
         }
 

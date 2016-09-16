@@ -39,7 +39,7 @@ namespace CompressionStocking
         // From IBtnHandler
         public void StartBtnPushed()
         {
-            notifier = new Notification.CompressionStoppetMessage();
+            notifier = new Notification.CompStartedMsg();
             notifier.notify();
             _compressionCtrl.Compress(this);
         }
