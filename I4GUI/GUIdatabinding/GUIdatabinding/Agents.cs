@@ -74,5 +74,10 @@ namespace I4GUI
                 assignment = value;
             }
         }
+
+        public override string ToString()
+        {
+            return CodeName;
+        }
     }
 }
