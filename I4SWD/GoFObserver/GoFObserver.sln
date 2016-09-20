@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoFObserverUsingGenerics", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoFObserverGeneric", "GoFObserverGeneric\GoFObserverGeneric.csproj", "{48025E26-135E-47C7-ADC0-51228527D935}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoFObserverMarketPlace", "GoFObserverMarketPlace\GoFObserverMarketPlace.csproj", "{88BBEDCA-9E81-43BF-BF2C-5AB95367FC5D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{48025E26-135E-47C7-ADC0-51228527D935}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48025E26-135E-47C7-ADC0-51228527D935}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48025E26-135E-47C7-ADC0-51228527D935}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88BBEDCA-9E81-43BF-BF2C-5AB95367FC5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88BBEDCA-9E81-43BF-BF2C-5AB95367FC5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88BBEDCA-9E81-43BF-BF2C-5AB95367FC5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88BBEDCA-9E81-43BF-BF2C-5AB95367FC5D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
