@@ -1,11 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoFObserver", "GoFObserver\GoFObserver.csproj", "{234A6BC8-D57F-4848-ADF2-44A4F6D0206D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoFObserverDLL", "GoFObserverDLL\GoFObserverDLL.csproj", "{2646B5DA-3BAB-48B6-B96C-37730FBBF206}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoFObserverUsingGenerics", "GoFObserverGenerics\GoFObserverUsingGenerics.csproj", "{861BBF2A-23E5-4E31-B47F-B2C7BE359844}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoFObserverGeneric", "GoFObserverGeneric\GoFObserverGeneric.csproj", "{48025E26-135E-47C7-ADC0-51228527D935}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{2646B5DA-3BAB-48B6-B96C-37730FBBF206}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2646B5DA-3BAB-48B6-B96C-37730FBBF206}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2646B5DA-3BAB-48B6-B96C-37730FBBF206}.Release|Any CPU.Build.0 = Release|Any CPU
+		{861BBF2A-23E5-4E31-B47F-B2C7BE359844}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{861BBF2A-23E5-4E31-B47F-B2C7BE359844}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{861BBF2A-23E5-4E31-B47F-B2C7BE359844}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{861BBF2A-23E5-4E31-B47F-B2C7BE359844}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48025E26-135E-47C7-ADC0-51228527D935}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48025E26-135E-47C7-ADC0-51228527D935}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48025E26-135E-47C7-ADC0-51228527D935}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48025E26-135E-47C7-ADC0-51228527D935}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

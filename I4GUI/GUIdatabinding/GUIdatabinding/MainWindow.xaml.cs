@@ -21,36 +21,33 @@ namespace GUIdatabinding
     /// </summary>
     public partial class MainWindow : Window
     {
-        I4GUI.Agents agentGrps = new Agents();
-
-        I4GUI.Agent anAgent = new I4GUI.Agent("007", "James Bond", "Park Avenue", "Assaniation", "Bush");
-        I4GUI.Agent secondAgent = new I4GUI.Agent("005", "Me", "Here", "Boom", "myMom");
+        public I4GUI.Agents _agentGrps = new Agents();
 
         public MainWindow()
         {
             InitializeComponent();
 
-            agentGrps.Add(anAgent);
-            agentGrps.Add(secondAgent);
+            listBox.ItemsSource = _agentGrps;
 
+            //listBox.SelectionChanged += new SelectionChangedEventHandler(listBox_SelectionChanged);
             //Binding binding1 = new Binding();
             //binding1.Source = agentGrps;
-            listBox.ItemsSource = agentGrps;
+
+            I4GUI.Agent anAgent = new I4GUI.Agent("007", "James Bond", "Park Avenue", "Assaniation", "Bush");
+            _agentGrps.Add(anAgent);
+            I4GUI.Agent snAgent = new I4GUI.Agent("005", "Jerome", "Parks Avenue", "Assaniation", "Bush");
+            _agentGrps.Add(snAgent);
             //listBox.SetBinding(ListBox.ItemsSourceProperty, binding1);
             
+
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            AgentIdlblA.Content = anAgent.ID;
-            CodenamelblA.Content = anAgent.CodeName;
-            SpecialitylblA.Content = anAgent.Speciality;
-            AssignmentlblA.Content = anAgent.Assignment;
+            //I4GUI.Agent anAgent = new I4GUI.Agent("007", "James Bond", "Park Avenue", "Assaniation", "Bush");
+            //_agentGrps.Add(anAgent);
         }
 
-        private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
+        
     }
 }

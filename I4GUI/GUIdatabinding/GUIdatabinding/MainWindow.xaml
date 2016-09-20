@@ -4,8 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUIdatabinding"
+        xmlns:i4Gui="clr-namespace:I4GUI"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
+    <!--<Window.Resources>
+        <i4Gui:Agents x:Key="_agentGrps"/>
+    </Window.Resources>-->
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="110*"/>
@@ -26,18 +31,18 @@
         <Label x:Name="Specialitylbl" Content="Speciality" HorizontalAlignment="Left" Grid.Column="0" Grid.Row="2" VerticalAlignment="center" Height="26" Margin="0,10" Width="60"/>
         <Label x:Name="Assignmentlbl" Content="Assignment" HorizontalAlignment="Left" Grid.Column="0" Grid.Row="3" VerticalAlignment="center" Height="26" Margin="0,10" Width="72"/>
 
-        <TextBox x:Name="AgentIdtxtBox" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" TextWrapping="Wrap" Text="{Binding Path=ID}" Height="22" Margin="0,10" />
-        <TextBox x:Name="CodeNametxtBox" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap" Width="152" Text="{Binding Path=agentGrps}" Height="22" Margin="0,13" />
-        <TextBox x:Name="Speciality" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap" Width="152" Text="{Binding Path=Speciality}" Height="22" Margin="0,12" />
-        <TextBox x:Name="AssignmenttxtBox" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap" Width="152" Text="{Binding Path=Assignment}" Height="22" Margin="0,12" />
+        <TextBox x:Name="AgentIdtxtBox" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" TextWrapping="Wrap"  Height="22" Margin="0,10" />
+        <TextBox x:Name="CodeNametxtBox" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap" Width="152"  Height="22" Margin="0,13" />
+        <TextBox x:Name="Speciality" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap" Width="152"  Height="22" Margin="0,12" />
+        <TextBox x:Name="AssignmenttxtBox" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap" Width="152"  Height="22" Margin="0,12" />
 
-        <Label x:Name="AgentIdlblA" Content="Id" HorizontalAlignment="Left" Grid.Column="2" Grid.Row="0" VerticalAlignment="center" Height="26" Margin="0,8" Width="20"/>
+        <Label x:Name="AgentIdlblA" Content="Id" HorizontalAlignment="Left" Grid.Column="2" Grid.Row="0" VerticalAlignment="center" Height="26" Margin="0,8" Width="20" />
         <Label x:Name="CodenamelblA" Content="CodeName" HorizontalAlignment="Left" Grid.Column="2" Grid.Row="1" VerticalAlignment="center" Height="26" Margin="0,11" Width="70"/>
         <Label x:Name="SpecialitylblA" Content="Speciality" HorizontalAlignment="Left" Grid.Column="2" Grid.Row="2" VerticalAlignment="center" Height="26" Margin="0,10" Width="60"/>
         <Label x:Name="AssignmentlblA" Content="Assignment" HorizontalAlignment="Left" Grid.Column="2" Grid.Row="3" VerticalAlignment="center" Height="26" Margin="0,10" Width="72"/>
         <Button x:Name="button" Content="Button" Grid.Column="1" HorizontalAlignment="Left" Margin="38,33,0,0" Grid.Row="4" VerticalAlignment="Top" Width="75" Click="button_Click" Height="22"/>
-       
-        <ListBox x:Name="listBox" Grid.Column="2" HorizontalAlignment="Left" Height="182" Margin="93,0,0,0" VerticalAlignment="Top" Width="162" Grid.RowSpan="4" SelectionChanged="listBox_SelectionChanged" />
+
+        <ListBox x:Name="listBox" Grid.Column="2" HorizontalAlignment="Left" Height="182" Margin="93,0,0,0" VerticalAlignment="Top" Width="162" Grid.RowSpan="4"  IsSynchronizedWithCurrentItem="True"/>
 
 
     </Grid>

@@ -1,24 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using GoFObserverDLL;
+﻿using System.Collections.Generic;
+using GoFObserverGeneric;
 
-namespace GoFObserver
+namespace GoFObserverGenerics
 {
-    public class Portfolio : GoFObserverDLL.Subject, GoFObserverDLL.IObserver
+    public class Portfolio : GoFObserverGeneric.Subject<Portfolio>, GoFObserverGeneric.IObserver<Stocks>
     {
-        public void Update(GoFObserverDLL.Subject subject)
-        {
-        //Console.WriteLine("Update funktion called!");
+        //public void Update(GoFObserverDLL.Subject subject)
+        //{
+        ////Console.WriteLine("Update funktion called!");
 
-            Stocks temp = _stockList.Find(x => x.StockName.Contains(((Stocks) subject).StockName));
+        //    Stocks temp = _stockList.Find(x => x.StockName.Contains(((Stocks) subject).StockName));
 
-            //temp.StockValue = ((Stocks) subject).StockValue;
-            TotalStockRevenue = 0;
+        //    //temp.StockValue = ((Stocks) subject).StockValue;
+        //    TotalStockRevenue = 0;
 
-        }
+        //}
 
         public void AddStock(Stocks s)
         {
@@ -32,8 +28,14 @@ namespace GoFObserver
             s.Detach(this);
         }
 
+        public void Update(Subject<Stocks> subject)
+        {
+                Stocks temp = _stockList.Find(x => x.StockName.Contains(((Stocks) subject).StockName));
 
-        
+                //temp.StockValue = ((Stocks) subject).StockValue;
+                TotalStockRevenue = 0;
+        }
+
 
         public double TotalStockRevenue
         {
@@ -60,5 +62,6 @@ namespace GoFObserver
 
         public List<Stocks> _stockList = new List<Stocks>();
         private double _totalStockRevenue;
+       
     }
 }

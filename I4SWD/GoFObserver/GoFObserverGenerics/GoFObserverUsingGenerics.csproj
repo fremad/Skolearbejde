@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{234A6BC8-D57F-4848-ADF2-44A4F6D0206D}</ProjectGuid>
+    <ProjectGuid>{861BBF2A-23E5-4E31-B47F-B2C7BE359844}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GoFObserver</RootNamespace>
-    <AssemblyName>GoFObserver</AssemblyName>
+    <RootNamespace>GoFObserverGenerics</RootNamespace>
+    <AssemblyName>GoFObserverGenerics</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -53,9 +53,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GoFObserverDLL\GoFObserverDLL.csproj">
-      <Project>{2646b5da-3bab-48b6-b96c-37730fbbf206}</Project>
-      <Name>GoFObserverDLL</Name>
+    <ProjectReference Include="..\GoFObserverGeneric\GoFObserverGeneric.csproj">
+      <Project>{48025e26-135e-47c7-adc0-51228527d935}</Project>
+      <Name>GoFObserverGeneric</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

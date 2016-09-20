@@ -16,14 +16,14 @@ namespace GoFObserverDLL
         {
             _observers.Remove(obs);
         }
-        public void Notify()
+        public void Notify(Subject subject)
         {
             foreach (var item in _observers)
             {
-                item.Update();
+                item.Update(subject);
             }
         }
 
-        List<IObserver> _observers = new List<IObserver>(); 
+       readonly List<IObserver> _observers = new List<IObserver>(); 
     }
 }
