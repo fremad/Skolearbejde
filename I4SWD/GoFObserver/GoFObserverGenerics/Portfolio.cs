@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using GoFObserverGeneric;
+using System.Linq;
+using System;
 
 namespace GoFObserverGenerics
 {
@@ -18,22 +20,54 @@ namespace GoFObserverGenerics
 
         public void AddStock(Stocks s)
         {
-            _stockList.Add(s);
+            // _stockList.Contains.item
+
+
+            foreach (var item in _stockList)
+            {
+                if (item.First.StockName == s.StockName)
+                {
+                    item.Second++;
+                    return;
+                }
+            }
+
+            
+                Pair<Stocks, int> temp = new Pair<Stocks, int>();
+                temp.First = s;
+                temp.Second = 1;
+                _stockList.Add(temp);
+
             s.Attach(this);
         }
 
         public void DeleteStock(Stocks s)
         {
-            _stockList.Remove(s);
-            s.Detach(this);
+            foreach (var item in _stockList)
+            {
+                if (item.First.StockName == s.StockName)
+                {
+                    item.Second--;
+
+                    if(item.Second == 0)
+                    {
+                        Pair<Stocks, int> temp = new Pair<Stocks, int>();
+                        temp.First = s;
+                       _stockList.Remove(temp);
+                        s.Detach(this);
+                    }
+                    
+                    
+                }
+            }
         }
 
         public void Update(Subject<Stocks> subject)
         {
-                Stocks temp = _stockList.Find(x => x.StockName.Contains(((Stocks) subject).StockName));
+            //Stocks temp = _stockList.Find(x => x.StockName.Contains(((Stocks) subject).StockName));
+            TotalStockRevenue = 0;
+            //temp.StockValue = ((Stocks) subject).StockValue;
 
-                //temp.StockValue = ((Stocks) subject).StockValue;
-                TotalStockRevenue = 0;
         }
 
 
@@ -45,7 +79,7 @@ namespace GoFObserverGenerics
                 double sum = 0;
                 foreach (var stock in _stockList)
                 {
-                    sum += stock.StockValue;
+                    sum += stock.First.StockValue * stock.Second;
                 }
 
                 _totalStockRevenue = sum;
@@ -55,13 +89,17 @@ namespace GoFObserverGenerics
         }
 
         public string PortifolioName { get; set; }
-        
 
 
-        
 
-        public List<Stocks> _stockList = new List<Stocks>();
+        public List<Pair<Stocks, int>> _stockList = new List<Pair<Stocks, int>>();
         private double _totalStockRevenue;
-       
+
+    }
+
+    public class Pair<T1, T2>
+    {
+        public T1 First { get; set; }
+        public T2 Second { get; set; }
     }
 }

@@ -27,10 +27,10 @@ namespace GoFObserverGenerics
 
             foreach (var stock in portfolio._stockList)
             {
-                Console.WriteLine("StockName : " + stock.StockName + ",  Value : " + stock.StockValue + "\n");
+                Console.WriteLine("StockName : " + stock.First.StockName + ",  Value : " + stock.First.StockValue + ",  Stockcount : " + stock.Second + ",  total : "+ stock.First.StockValue*stock.Second + "\n");
             }
 
-            Console.WriteLine("\n\n\n\n___________________________________________________________________________________");
+            Console.WriteLine("\n\n\n\n__________________________________________________________________________");
         }
 
         public void Update(Subject<Portfolio> subject)
