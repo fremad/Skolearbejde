@@ -1,0 +1,76 @@
+using DoorControl;
+using NSubstitute;
+using NUnit.Framework;
+
+namespace DoorControlUnitTests
+{
+
+    [TestFixture]
+    public class Class2
+    {
+        private IDoor _IDoor;
+        private IUserValidation _UserValidation;
+        private IEntryNotification _EntryNotification;
+
+        [SetUp]
+        public void SetUp()
+        {
+            _IDoor = Substitute.For<DoorControl.IDoor>();
+            _UserValidation = Substitute.For<IUserValidation>();
+            _EntryNotification = Substitute.For<IEntryNotification>();
+
+            
+        }
+
+        [Test]
+        public void EntrynotificationGrantedTests()
+        {
+            var uut = new DoorControl.DoorControl(_UserValidation,_IDoor,_EntryNotification);
+
+            _UserValidation.ValidateEntryRequest(0).Returns(true);
+
+            _EntryNotification.Received().NotifyEntryGranted();
+        }
+
+        [Test]
+        public void EntrynotificationnotGrantedTests()
+        {
+            var uut = new DoorControl.DoorControl(_UserValidation, _IDoor, _EntryNotification);
+
+            _UserValidation.ValidateEntryRequest(0).Returns(false);
+
+            _EntryNotification.Received().NotifyEntryDenied();
+        }
+
+        [Test]
+        public void EntryNotificationNotCalledWithoutValidation()
+        {
+            var uut = new DoorControl.DoorControl(_UserValidation, _IDoor, _EntryNotification);
+
+            _UserValidation.ValidateEntryRequest(0).Returns(false);
+
+            _EntryNotification.DidNotReceive().NotifyEntryGranted();
+        }
+
+
+
+
+
+        [Test]
+        public void ClosedDoorIsCalled()
+        {
+            var uut = new DoorControl.DoorControl();
+
+            uut.CloseDoor();
+            _IDoor.Received().Close();
+        }
+
+
+
+
+
+
+
+
+    }
+}
